@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd ">  
+    <!-- 读取资源文件   步骤5 的文件 -->  
+    
+	<bean id="jedis" class="flight.spider.web.redis.redisProvider">
+        <property name="expire" value="${redis.expire}" />
+        <property name="maxTotal" value="${redis.pool.maxTotal}" />
+        <property name="maxIdle" value="${redis.pool.maxIdle}" />
+        <property name="maxWaitMillis" value="${redis.pool.maxWaitMillis}" />
+        <property name="testOnBorrow" value="${redis.pool.testOnBorrow}" />
+        <property name="testOnReturn" value="${redis.pool.testOnReturn}" />
+        <property name="ip" value="${redis.ip}" />
+        <property name="port" value="${redis.port}" />
+    </bean>
+</beans>

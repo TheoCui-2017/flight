@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:aop="http://www.springframework.org/schema/aop"  
+    xmlns:tx="http://www.springframework.org/schema/tx" 
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd  
+    http://www.springframework.org/schema/tx 
+    http://www.springframework.org/schema/tx/spring-tx-4.0.xsd 
+    http://www.springframework.org/schema/aop 
+    http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">  
+    <!-- 读取资源文件   步骤5 的文件 -->  
+    <!-- 这个是Spring的注入技术   给org.apache.commons.dbcp.BasicDataSource 类的属性注入对应的值 ,读取数据库配置信息-->  
+    <!-- c3p0 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="com.mysql.jdbc.Driver" />
+        <property name="jdbcUrl" value="jdbc:mysql://${mysql.host}:${mysql.port}/${mysql.db}" />
+        <property name="user" value="${mysql.username}" />
+        <property name="password" value="${mysql.password}" />
+        <property name="autoCommitOnClose" value="true"/>
+        <property name="checkoutTimeout" value="${mysql.c3p0.checkoutTimeout}"/>
+        <property name="initialPoolSize" value="${mysql.c3p0.initialPoolSize}"/>
+        <property name="minPoolSize" value="${mysql.c3p0.minPoolSize}"/>
+        <property name="maxPoolSize" value="${mysql.c3p0.maxPoolSize}"/>
+        <property name="maxIdleTime" value="${mysql.c3p0.maxIdleTime}"/>
+        <property name="acquireIncrement" value="${mysql.c3p0.acquireIncrement}"/>
+        <property name="maxIdleTimeExcessConnections" value="${mysql.c3p0.maxIdleTimeExcessConnections}"/>
+        <property name="idleConnectionTestPeriod" value="${mysql.c3p0.idleConnectionTestPeriod}"/>
+    </bean>
+	
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <property name="hibernateProperties">
+            <value>
+                hibernate.dialect=org.hibernate.dialect.MySQLDialect
+				hibernate.hbm2ddl.auto=update
+				hibernate.format_sql=true
+				hibernate.show_sql=false
+				current_session_context_class=thread
+				hibernate.autoReconnect=true
+            </value>
+        </property>
+        <property name="packagesToScan" value="flight.spider.web.bean" />
+    </bean>
+    <bean id="transactionManager"  class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+   		 <property name="sessionFactory" ref="sessionFactory"/>
+  	</bean>
+	
+	<!-- 需要引入tx的命名空间 -->  
+	<!-- 这是事务通知操作（传播特性），使用的事务管理器引用自 transactionManager --> 	 
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">  
+	       <tx:attributes>  
+         <!-- 指定哪些方法需要加入事务，这里懒惰一下全部加入，可以使用通配符来只加入需要的方法 -->  
+            	<tx:method name="add*" propagation="REQUIRED" />  <!-- 根据每个（类）方法配置事务的传播特性 -->
+            	<tx:method name="modify*" propagation="REQUIRED" />  
+           		<tx:method name="delete*" propagation="REQUIRED" /> 
+           		<tx:method name="save*" propagation="REQUIRED"/>
+      			<tx:method name="update*" propagation="REQUIRED"/> 
+      			<tx:method name="search*" propagation="REQUIRED"/>
+           		<tx:method name="get*" propagation="REQUIRED" read-only="true"/>  
+            	<tx:method name="query*" propagation="REQUIRED" read-only="true"/>  
+           		<tx:method name="*" propagation="REQUIRED" />
+				<tx:method name="count*" propagation="REQUIRED" read-only="true" /> 
+				<tx:method name="find*" propagation="REQUIRED" read-only="true" /> 
+				<tx:method name="list*" propagation="REQUIRED" read-only="true" /> 
+				<tx:method name="is*" propagation="REQUIRED" read-only="true" /> 
+       		</tx:attributes>  
+    </tx:advice>   
+   
+	<!-- 需要引入aop的命名空间（配置事物的切入点）-->  
+	<aop:config>  
+		<!-- 切入点指明了在执行Service的所有方法时产生事务拦截操作  --> 
+		<aop:pointcut id="serviceMethods" expression="execution(* flight.spider.web.service.*.*(..))" />
+		<!-- 定义了将采用何种拦截操作，这里引用到 txAdvice -->  
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="serviceMethods" />
+	</aop:config>
+</beans>

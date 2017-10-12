@@ -1,0 +1,196 @@
+﻿@charset "utf-8";
+ body{ font-size:12px;}
+.header1{width:1000px; margin:5px auto}
+.searchBoxModel{padding: 18px 0 0 25px;}
+.shuxian{width:1px; background-color:#999; height:35px;}
+.f2{margin-left:20px; margin-top:5px; float:left}
+.fr1{float: right;display: inline; margin-top:25px;}
+.f3{width:60px; text-align:center; height:20px; font-size:12px;}
+.f4{background:url(/Themes/images/flight/processbg1.png) no-repeat; height:7px; width:178px;}
+.search_btn_bg{ width:96px; height:26px; background:url(/Themes/images/flight/search_imgicon.png) 0 -42px no-repeat; border:0; cursor:pointer;}
+.search_btn_bg:hover{ background-position:0 -71px;}
+.inputd{ border:1px #DDDDDD solid; padding-left:3px; width:100px;height:25px;}
+/* CSS Document */
+.search_dh_gj {background: #f5f5f5;border: 1px solid #dddddd; padding:10px 0 10px 22px;}
+.select_sty1 .select{position:absolute; width:35px; height:25px; line-height:25px; padding:0 15px 0 4px; background:#fff url(/Themes/images/flight/arrow_blue_t.png) no-repeat 40px; overflow:hidden; border:1px solid #ddd;}
+.select_sty1 .styled {width:54px; margin-top:3px;}
+.select_sty2 {margin-right:2px;}
+.select_sty2 .select{position:absolute; width:79px; height:22px; line-height:22px; padding:0px 20px 0px 4px; background:#fff url(/Themes/images/flight/select_arrow.jpg) no-repeat right top; overflow:hidden; border:1px solid #ddd;}
+.select_sty2 .styled {width:103px; margin-top:3px;}
+.huan_icon {background:url(/Themes/images/flight/huan.png) no-repeat top; width:34px; height:16px; display:inline-block; margin:5px 3px 0 3px;}
+.huan_icon:hover {background:url(/Themes/images/flight/huan.png) no-repeat bottom;}
+.time_box {position:relative; float:left;}
+.timebox_icon {background: url(/Themes/images/flight/time2.png) no-repeat scroll 0 0 transparent; width:22px; height:17px; position: absolute; top:5px; right:5px;}
+.time_width {width:100px;}
+.sanjian_blue_b {width: 0;height: 0;border-top-width: 4px;border-right-width: 4px;border-left-width: 4px;border-style: solid;border-color: #4aaaa6 #f5f5f5 #f5f5f5 #f5f5f5;font-size: 0;line-height: 0; margin:2px 0 0px 3px; display:inline-block;}
+.sanjian_blue_b2 {width: 0;height: 0;border-bottom-width: 4px;border-right-width: 4px;border-left-width: 4px;border-style: solid;border-color: #f5f5f5 #f5f5f5 #4aaaa6 #f5f5f5;font-size: 0;line-height: 0; margin:0px 0 2px 3px; display:inline-block;}
+.hb_title {margin:6px 0;}
+.hb_title h4 {margin:0; font-size:16px;}
+.hb_arrow {background:url(/Themes/images/flight/arrow_gray_r.png) no-repeat left top; width:25px; height:10px; overflow:hidden; vertical-align:middle; display:inline-block; margin:0 5px;}
+.wf_arrow {background:url(/Themes/images/flight/icon_wf.png) no-repeat left top; width:22px; height:10px; overflow:hidden; vertical-align:middle; display:inline-block; margin:0 5px;}
+/*滑动门菜单*/
+.m-condition-bd {zoom: 1; min-height: 27px;	_height: 29px;}
+.g-down {display: inline-block; *display:inline; *zoom:1; vertical-align: top;	margin-right: 7px; position:relative;z-index:1;}
+.g-down .target {
+    width:108px;
+    margin-right:10px;
+    position: relative;
+    z-index: 100;
+    *zoom:1;
+    _zoom: 0;
+    padding: 5px 5px 5px 8px;
+    _padding: 3px 5px 2px 8px;
+    cursor: pointer;
+    border: solid 1px #ddd;
+    vertical-align: middle;
+}
+.g-down .target .g-ico {
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    border-top-width: 4px;
+    border-right-width: 4px;
+    border-left-width: 4px;
+    border-style: solid;
+    border-color: #555 #fff #fff #fff;
+    font-size: 0;
+    line-height: 0;
+    margin:7px 6px 0px 3px;
+    float: right;
+    display:inline-block;
+}
+.g-down:hover .g-ico-soliddrop {
+    overflow: hidden;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-bottom-width: 4px;
+    *border-bottom-width: 5px;
+    border-right-width: 4px;
+    *border-right-width: 5px;
+    border-left-width: 4px;
+    *border-left-width: 5px;
+    border-style: solid;
+    border-color: #fff #fff #555 #ffffff;
+    font-size: 0;
+    line-height: 0;
+    margin:3px 6px 0px 3px;
+    float: right;
+    display:inline-block;
+}
+.g-down:hover .target {
+    padding: 5px 5px 5px 8px;
+    _padding: 3px 5px 4px 8px;
+    background: #fff;
+    border-bottom: 0;
+}
+.g-down .list {
+    display:none;
+    position:absolute;
+    background:#fff;
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+    overflow: hidden;
+    z-index: 99999;
+    overflow: hidden;
+    zoom: 1;
+    margin-top: -1px;
+    padding: 5px 0 5px;
+    border: 1px solid #ddd;
+}
+.g-down:hover .list {display:inline-block;}
+.g-down .list ul {float: left;margin-right: -1px;}
+.g-down .list li {
+    padding: 4px 0px 4px 14px;
+    vertical-align: middle;
+    overflow: hidden;
+    line-height: 14px;
+    float: left;
+}
+.g-down .airline {float:left;}
+.g-down .money {float: right;height: 14px;padding: 3px 0; width:55px;}
+.g-down .inp_chk {width: 13px;height: 13px;	padding: 0;	margin: -2px 4px 0 0;vertical-align: middle;}
+.g-ico-low {width: 12px;height: 12px;background-position: -56px -4px;overflow: hidden;	display: inline-block;*display:inline;*zoom:1;	background-image: url(/Themes/images/flight/icon.png);background-repeat: no-repeat;line-height: 10;vertical-align: top;}
+
+.gjjp_list_title { background-color:#798291; width:100%; height:28px; line-height:28px; color:#FFFFFF;}
+.gjjp_table {table-layout:fixed; *table-layout:auto;}
+.flightt{float:left; margin-left:8px}
+.gjjp_arrow {width:33px; height:10px; background:url(/Themes/images/flight/arrow_gray_r.png) no-repeat left -10px; float:left; margin:15px 5px; overflow:hidden;}
+.gjjp_arrow2 {width:33px; height:10px; background:url(/Themes/images/flight/arrow_gray_r.png) no-repeat left -20px; float:left; margin:15px 5px; overflow:hidden;}
+.gjjp_time_icon {background:url(/Themes/images/flight/icon.png) no-repeat left top; width:20px; height:20px; display:inline-block; vertical-align:middle;}
+.arrow_b {width:9px; height:5px; background:url(/Themes/images/flight/arrow_blue_t.png) no-repeat left top; display:inline-block; margin:8px 3px 0 3px;}
+.arrow_t {width:9px; height:5px; background:url(/Themes/images/flight/arrow_blue_b.png) no-repeat left top; display:inline-block; margin:8px 3px 0 3px;}
+.hover_bg:hover {background:#f8f8f8;}
+.arrow_zhzh {width:26px; height:10px; background:url(/Themes/images/flight/arrow_gray_r.png) no-repeat left -30px; display:inline-block;}
+.Airlines_more {background:url(/Themes/images/flight/icon.png) no-repeat -24px top; width:24px; height:20px; margin-right:3px;}
+.zhongzhuan_bg {background:url(/Themes/images/flight/bg_zhzh.png) no-repeat left; height:22px; line-height:22px; padding-left:28px; padding-right:190px; width:265px; text-align:center;}
+.border_t {	border-top:1px solid rgb(238,238,238);}
+.border_t2 {border-top:1px solid #bbb;}
+.border_t_d {border-top:1px dashed #ddd;}
+.border_b {	border-bottom:1px solid #bbb;}
+/*chengshi*/
+.box_fixed{position:absolute;top:25px; left:0; border:1px solid #82b8ff;background-color:#fff;z-index:999999; box-shadow:0 0 5px #ccc;}
+.box_title {background:#004fb6; color:#fff; padding:0 5px; height:25px; line-height:25px;}
+.box_close {background:url(/Themes/images/flight/close.png) no-repeat left top; width:12px; height:12px; float:right; margin-top:6px; overflow:hidden;}
+.box_close:hover {background:url(/Themes/images/flight/close.png) no-repeat left -13px;}
+.tab_list{height:24px; line-height:24px; margin-left:5px;}
+.tab_list li {background:#fff; float:left; margin:0 2px;}
+.tab_list li a {padding:0 10px; color:#4aaaa6; text-decoration:none;}
+.tab_list li.selectTag {border:1px solid #4aaaa6; border-bottom:none; position:relative; font-weight:800;}
+.tagContent {border-top:1px solid #2d3e50; display:none; padding:10px;}
+#tagContent div.selectTag {display:block;}
+.chsh_list {width:400px;}
+.chsh_list li {width:70px; margin-right:10px; float:left; overflow:hidden; white-space:nowrap; padding-bottom:5px;}
+.chsh_list li a {color:#333; text-decoration:none;}
+.chsh_list li a:hover {color:#4aaaa6; text-decoration:underline;}
+/*退改签*/
+.tgq_box {position:absolute; width:360px; left:-18px; top:20px;}
+.tgqbox_arrow{background: url(/Themes/images/flight/icon_wf.png) 0 -40px; width:18px; height:10px; display:block; position:relative; left:58px; _left:40px; z-index:11;}
+.tgq_box .hiddenInfo {border:1px solid #dcdcdc; background:#fff; padding:5px 8px; position:relative; top:-1px; _top:-3px; z-index:10;}
+/*行李*/
+.xl_box {position:absolute; width:360px; left:-18px; top:20px;}
+.tgqbox_arrow{background: url(/Themes/images/flight/icon_wf.png) 0 -40px; width:18px; height:10px; display:block; position:relative; left:58px; _left:40px; z-index:11;}
+.xl_box .hiddenInfo {border:1px solid #dcdcdc; background:#fff; padding:5px 8px; position:relative; top:-1px; _top:-3px; z-index:10;}
+/*共享*/
+.gongx_box{position:absolute; width:180px; left:-18px; top:20px;}
+.gongx_arrow{background: url(/Themes/images/flight/icon_wf.png) 0 -40px; width:18px; height:10px; display:block; position:relative; left:22px; z-index:11;}
+.gongx_box .hiddenInfo {border:1px solid #dcdcdc; background:#fff; padding:5px 8px; position:relative; top:-1px; _top:-3px; z-index:10;}
+/*wangfan*/
+.wf_box {border:1px solid #bbb;}
+.wf_box .gjjp_table {padding-bottom:0px;}
+.wf_icon {background:url(/Themes/images/flight/icon_wf.png) no-repeat -36px 0; width:12px; height:12px; display:inline-block;}
+.wf_box .gjjp_table  td {padding:10px 0;}
+.qu_icon {background:url(/Themes/images/flight/icon_wf.png) no-repeat 0 -18px; width:17px; height:17px; display:inline-block;}
+.fan_icon {background:url(/Themes/images/flight/icon_wf.png) no-repeat -23px -18px; width:17px; height:17px; display:inline-block;}
+.wf_box .gx_btn {border:1px solid #4aaaa6; background:#fff; color:#fff; cursor:pointer; padding:0 2px; line-height:130%;}
+.wf_box .gx_btn:hover {background:#3e8f8c;}
+
+.btn_orange_2{ width:90px; height:35px; line-height:35px; padding:0 10px; font-size:14px; font-weight:bold; border:0; cursor:pointer; border-radius:4px; color:#ffffff; background-color:#4aaaa6;}
+.btn_orange_2:hover{ background-color:#3e8f8c;}
+
+.loading{font-size:12px; color:#404040; text-align:center;padding-top:5px;}
+.loading p{ padding:10px 0;}
+/*繁忙*/
+.fanmang{ background-color:#fffced; border:1px #fcf8e4 solid; padding-top:5px; padding-left:50px; height:70px; font-size:12px}
+.research{width:150px; height:25px; background-color:#4aaaa6; color:#fff; text-align:center; font-size:14px; line-height:25px;}
+.research:hover{width:150px; height:25px; background-color:#3e8f8c; text-align:center; font-size:14px; line-height:25px;}
+/*验价不一致弹出层*/
+.tishi{ width:500px; border:1px solid #999; height:130px; font-size:14px;background-color:White;}
+.tishi_content{ width:500px; height:100px; font-size:14px; padding-left:30px; padding-top:10px;}
+.tishi_content p{margin-top:10px; margin-bottom:20px;}
+.tishi a{text-decoration:none; color:#4aaaa6}
+.tishi_queding{width: 100px;height: 25px;background-color: #0072c6;text-align: center;line-height: 25px;font-size: 14px;margin-left: 5px; color:#FFF; cursor:pointer; float:left; margin-right:20px; margin-left:100px;}
+.tishi_btnclose{width: 100px;height: 25px;background-color: #4aaaa6;text-align: center;line-height: 25px;font-size: 14px;margin-left: 5px; color:#FFF; cursor:pointer; float:left; margin-right:20px;}
+.tishi_title{ background: none repeat scroll 0 0 #E9F7FF; font-size:14px; font-weight:bold; height:30px; line-height:30px;  overflow: hidden; padding-left: 10px; position: relative; width:490px;}
+.tishi_close{ width:17px; height:17px; background:url(/Themes/images/flight/Common/ceng_close.png) no-repeat; position:absolute; right:6px; top:6px; cursor:pointer;}
+
+.pa-top{ padding-top:8px; float:left; margin-left:5px; cursor: pointer;}
+.upIcon{background:url(/Themes/images/flight/up.png) 0 0 no-repeat; height:15px; width:7px;}
+.downIcon{background:url(/Themes/images/flight/down.png) 0 0 no-repeat; height:15px; width:7px;}
+
+.btn_orange_Seach{ width:100px; height:35px; line-height:35px; padding:0 10px; font-size:14px; font-weight:bold; border:0; cursor:pointer; border-radius:4px; color:#ffffff; background-color:#4aaaa6;}
+.btn_orange_Seach:hover{ background-color:#3e8f8c;}
+
+
+/*错误提示*/
+.search_no {background:#fefbda; padding:10px;}
+.searchno_icon {height:35px; display:inline-block; background:url(/themes/images/public/warning.png) no-repeat 0 0; margin:0 10px; vertical-align:middle;padding-left: 40px; padding-top: 5px;}

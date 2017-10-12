@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+/* 你自己的样式 */
+.fl {float:left;}
+.width_150 {width:150px;}
+/*导航*/
+#Hui-nav > .menu_top > li > a{padding:0 20px 0 15px;}
+#Hui-nav > .menu_top > li,#Hui-nav > .menu_top > li > a{height:28px; line-height:28px}
+#Hui-nav > .menu_top > li > a:hover,#Hui-nav > .menu_top > li.current > a{ background-color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.8);}
+
+.menu_top .menutopselected{background-color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.8);}
+
+.menu_top a {margin:16px 1px 0 1px; background-color:rgba(255,255,255,0.1); border-radius:3px 3px 0 0; border:1px solid rgba(255,255,255,0.6);}
+.menu_top a:hover {border-radius:3px 3px 0 0;}
+.i_ticket {background:url(/themes/images/icon.png) no-repeat -13px -14px; width:20px; height:20px; display:inline-block; vertical-align:middle; margin-right:5px;}
+.i_hotel {background:url(/themes/images/icon.png) no-repeat -47px -14px; width:20px; height:20px; display:inline-block; vertical-align:middle; margin-right:5px;}
+
+
+/*company*/
+.order_con{ border:1px #eeeeee solid; margin-top:10px;}
+.add_roles{ width:70px; height:26px; border:0; cursor:pointer; display:block; float:right; margin:10px 10px 10px 0;}
+
+/*新增角色*/
+.prem dt{ line-height:26px;}
+.prem_gn{ padding:0 15px;}
+.prem_gn h2{ font-size:12px; font-weight:bold; padding-top:10px; padding-bottom:5px;}
+.prem_gn table tr.title td{padding:7px 10px;}
+.prem_gn ul{ width:665px; height:360px; overflow-y:scroll;}
+.prem_gn ul li.title{ background-color:#eeeeee;}
+.prem_gn ul li span{padding:12px 10px; display:block; float:left;}
+.prem_gn ul li.title span{ padding:7px 10px;}
+.prem_gn ul li table tr td{ padding:3px;}
+.border_b{ border-bottom: 1px #f1f1f1 solid;}
+
+.checkbox {vertical-align:middle; margin:0 3px; margin-top:-2px;}
+
+.radio {vertical-align:middle; margin-top:-2px; margin-bottom:1px; margin-right:3px;}
+

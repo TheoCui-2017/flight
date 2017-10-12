@@ -1,0 +1,11 @@
+/*下拉菜单*/
+$(document).ready(function(){
+    $(document).on("mouseenter",".dropDown",function(){
+      $(this).addClass("dropDown_hover");
+      $(this).find("ul.dropDown-menu").show();
+    });
+    $(document).on("mouseleave",".dropDown",function(){
+      $(this).removeClass("dropDown_hover");
+      $(this).find("ul.dropDown-menu").hide();
+    });
+});
